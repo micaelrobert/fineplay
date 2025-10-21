@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://6eay2nemgxrh"]
+
+[node name="SceneLoader" type="Node2D"]

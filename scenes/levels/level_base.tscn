@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://kscalhqux3kk"]
+
+[ext_resource type="Script" uid="uid://ttexfqeid0g5" path="res://scripts/game/level_base.gd" id="1_u0om3"]
+[ext_resource type="AudioStream" uid="uid://bt6xlwitqoprw" path="res://assets/audio/sfx/gameover.wav" id="2_vvcwp"]
+[ext_resource type="AudioStream" uid="uid://d4i43iph5pkxe" path="res://assets/audio/sfx/House In a Forest Loop.ogg" id="3_d61h5"]
+
+[node name="LevelBase" type="Node2D"]
+script = ExtResource("1_u0om3")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="UI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScoreLabel" type="Label" parent="UI/MarginContainer"]
+layout_mode = 2
+text = "Pontos: 0"
+horizontal_alignment = 2
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="CorrectSFX" type="AudioStreamPlayer2D" parent="Audio"]
+
+[node name="WrongSFX" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("2_vvcwp")
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="Audio"]
+stream = ExtResource("3_d61h5")
+autoplay = true
+
+[node name="LevelMechanics" type="Node2D" parent="."]

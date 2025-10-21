@@ -11,8 +11,15 @@ config_version=5
 [application]
 
 config/name="fineplay"
+run/main_scene="uid://kscalhqux3kk"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+config/main_scene=""
+
+[autoload]
+
+SceneLoader="*res://scripts/autoload/scene_loader.gd"
+Global="*res://scripts/autoload/global.gd"
 
 [display]
 
